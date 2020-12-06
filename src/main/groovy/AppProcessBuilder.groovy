@@ -19,7 +19,9 @@ class AppProcessBuilder {
             def exitValue = process.waitFor()
             if (exitValue == 0) {
                 println("Success")
-                println(stringBuilderOutput)
+                if (stringBuilderOutput.length() != 0) {
+                    println(stringBuilderOutput)
+                }
             } else {
                 println(exitValue)
                 println("Error")
